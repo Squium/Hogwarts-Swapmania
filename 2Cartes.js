@@ -28,7 +28,7 @@ async function  displayCharacters() {
                         <img src="${character.image}" alt="${character.name}" class="imgperso" />
                     </a>
                     <a href="ZoomCarte.html?slug=${character.slug}" class="card-back">
-                        <img src="images/Logo${character.house}.png" alt="${character.house}"/>
+                        <img src="Images/Logo${character.house}.png" alt="${character.house}"/>
                         <h2 class="Name">
                             ${character.name}
                         </h2>
