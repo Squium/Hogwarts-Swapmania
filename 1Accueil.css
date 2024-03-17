@@ -1,0 +1,435 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+.head {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.foreground {
+    z-index: 1000;
+}
+
+h1 {
+    margin-left: 15px;
+    font-family: 'Inter';
+    font-weight: 700;
+}
+
+.center {
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+.head ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flexhead {
+    display: flex;
+}
+
+.menu {
+    gap: 50px;
+}
+
+.boutonmenu {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 8px;
+    border-bottom: 3px solid black;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.boutonmenu:hover {
+    color: white;
+    background-color: #de091d;
+
+}
+
+.Menu-deroulant {
+    display: none;
+    position: absolute;
+    height: 40px;
+    right: 40px;
+    top: 32px;
+}
+
+
+/* RESPONSIVE HEADER */
+/* ET APPARITION DU MENU BURGER */
+
+@media (width < 950px) {
+
+    .decallogo {
+        width: 100%;
+        justify-content: left;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    /* Display du Menu */
+
+    .Menu-deroulant {
+        display: block;
+    }
+
+    /* Changement d'apparence du Menu actuel */
+
+    .nav_links {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        margin-left: -250%;
+        transition: 0.3s;
+    }
+
+    .nav_links.menu-mobile {
+        margin-left: 0;
+    }
+
+    .flexhead {
+        flex-direction: column;
+    }
+
+    .boutonmenu {
+        border-bottom: none;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 8px;
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+
+}
+
+
+@media (width <= 425px) {
+    .titrebike {
+        display: none;
+    }
+}
+
+
+/* Fin du header */
+
+
+/* Main */
+
+main {
+    background-color: white;
+}
+
+
+/* Diapo */
+
+.actu {
+    object-fit: cover;
+}
+
+.diapo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.slider_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.slider_content_items {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slider_content_items img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Button Nav Diapo */
+
+.slider_nav_button {
+    position: absolute;
+    border: none;
+    background-color:transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+.slider_nav_button img {
+    height: 50px;
+    width: 50px;
+}
+
+.slider_nav_button_next {
+    right: 20px;
+}
+
+.slider_nav_button_prev {
+    left: 20px;
+} 
+
+.slider_nav_button:hover {
+    background: rgb(209, 209, 209);
+}
+
+
+/* Fin de Button Nav Diapo */
+
+
+/* RRESPONSIVE 1*/
+
+@media (width < 800px) {
+    .ButtVP {
+        font-size: 15px;
+    }
+    .slider_nav_button img {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (width < 500px) {
+    .ButtVP {
+        font-size: 10px;
+    }
+}
+
+@media (width < 350px) {
+    .ButtVP {
+        font-size: 6px;
+    }
+}
+
+/* Fin du RESPONSIVE 1*/
+
+/* Fin de "Voir plus" Buttons */
+
+/* Fin du Diapo */
+
+/* Vidéo 24h Mans 2020 */
+
+
+
+
+/*  RESPONSIVE 2 */
+
+@media (width < 1000px) {
+    
+}
+
+@media (width < 800px) {
+    
+}
+
+@media (width < 650px) {
+    
+}
+
+@media (width < 550px) {
+    
+}
+
+@media (width < 400px) {
+    
+}
+
+/* Fin du RESPONSIVE 2*/
+
+
+
+.apropos {
+    width: 100%;
+}
+
+.titreapropos {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.textapropos {
+    text-align: center;
+    font-size: 27px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+}
+
+/* RESPONSIVE 3*/
+
+@media (width < 1200px) {
+    .textapropos {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media (width < 1000px) {
+    .textapropos {
+        font-size: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (width < 450px) {
+    .titreapropos {
+        font-size: 20px;
+    }
+}
+
+/* Fin du RESPONSIVE 3*/
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: #555555;
+    width: 100%;
+    height: auto;
+    color: white;
+}
+
+.footFlex {
+    display: flex;
+}
+
+.footText {
+    justify-content: space-between;
+    width: 100%;
+    padding: 60px 350px 20px 350px;
+}
+
+.footul {
+    list-style: none;
+    font-family: 'PT Sans';
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.footdiv1 {
+    width: 600px;
+}
+
+.footdiv2 {
+    width: 600px;
+}
+
+.footdiv3 {
+    
+    width: 600px;
+}
+
+
+.FootTitre {
+    margin-bottom: 20px;
+    font-family: 'PT Sans';
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+
+.MargeUL {
+    margin-left: 20px;
+}
+
+.footliens {
+    text-decoration: none;
+    color: white;
+}
+
+.footliens:hover {
+    text-decoration: underline;
+}
+
+
+.logofoot {
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ARR {
+    text-align: right;
+    padding: 20px;
+}
+
+
+/* RESPONSIVE FOOTER */
+
+@media (width < 1500px) {
+    .footText {
+        padding: 60px 150px 20px 150px;
+    }
+}
+
+@media (width < 1150px) {
+    .footText {
+        padding: 60px 50px 20px 50px;
+    }
+}
+
+@media (width < 850px) {
+    .footFlex {
+        flex-direction: column;
+    }
+    .MargeUL {
+        margin-bottom: 40px;
+    }
+    .ullien1 {
+        margin-top: -35px;
+    }
+}
+
+/* Fin du RESPONSIVE FOOTER */
+

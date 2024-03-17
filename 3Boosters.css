@@ -1,0 +1,312 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+.head {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.foreground {
+    z-index: 1000;
+}
+
+h1 {
+    margin-left: 15px;
+    font-family: 'Inter';
+    font-weight: 700;
+}
+
+.center {
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+.head ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flexhead {
+    display: flex;
+}
+
+.menu {
+    gap: 50px;
+}
+
+.boutonmenu {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 8px;
+    border-bottom: 3px solid black;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.boutonmenu:hover {
+    color: white;
+    background-color: #de091d;
+
+}
+
+.Menu-deroulant {
+    display: none;
+    position: absolute;
+    height: 40px;
+    right: 40px;
+    top: 32px;
+}
+
+
+/* RESPONSIVE HEADER */
+/* ET APPARITION DU MENU BURGER */
+
+@media (width < 950px) {
+
+    .decallogo {
+        width: 100%;
+        justify-content: left;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    /* Display du Menu */
+
+    .Menu-deroulant {
+        display: block;
+    }
+
+    /* Changement d'apparence du Menu actuel */
+
+    .nav_links {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        margin-left: -250%;
+        transition: 0.3s;
+    }
+
+    .nav_links.menu-mobile {
+        margin-left: 0;
+    }
+
+    .flexhead {
+        flex-direction: column;
+    }
+
+    .boutonmenu {
+        border-bottom: none;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 8px;
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+
+}
+
+
+@media (width <= 425px) {
+    .titrebike {
+        display: none;
+    }
+}
+
+
+/* Fin du header */
+
+/* Début du Main */
+
+.actus {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+}
+
+.divactus {
+    margin: 20px 50px;
+}
+
+.actusindi {
+    width: 1300px;
+}
+
+
+.actusindi img {
+    width: 1300px;
+    border-radius: 35px;
+    margin: 5px;
+}
+
+.actu1, .actu3 {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.actu2 {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+/* Début du RESPONSIVE Des Actus */
+
+@media (width <= 1400px) {
+    .divactus {
+        margin: 10px 20px;
+    }
+
+    .actusindi {
+        width: 100%;
+    }
+
+    .actusindi img {
+        width: 100%;
+        border-radius: 20px;
+        margin: 5px;
+    }
+}
+
+@media (width <= 700px) {
+    .actusindi img {
+        border-radius: 15px;
+    }
+}
+
+/* Fin du Main */
+
+/* Footer */
+
+footer {
+    background-color: #555555;
+    width: 100%;
+    height: auto;
+    color: white;
+}
+
+.footFlex {
+    display: flex;
+}
+
+.footText {
+    justify-content: space-between;
+    width: 100%;
+    padding: 60px 350px 20px 350px;
+}
+
+.footul {
+    list-style: none;
+    font-family: 'PT Sans';
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.footdiv1 {
+    width: 600px;
+}
+
+.footdiv2 {
+    width: 600px;
+}
+
+.footdiv3 {
+    
+    width: 600px;
+}
+
+
+.FootTitre {
+    margin-bottom: 20px;
+    font-family: 'PT Sans';
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+
+.MargeUL {
+    margin-left: 20px;
+}
+
+.footliens {
+    text-decoration: none;
+    color: white;
+}
+
+.footliens:hover {
+    text-decoration: underline;
+}
+
+
+.logofoot {
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ARR {
+    text-align: right;
+    padding: 20px;
+}
+
+
+
+/* RESPONSIVE FOOTER */
+
+@media (width < 1500px) {
+    .footText {
+        padding: 60px 150px 20px 150px;
+    }
+}
+
+@media (width < 1150px) {
+    .footText {
+        padding: 60px 50px 20px 50px;
+    }
+}
+
+@media (width < 850px) {
+    .footFlex {
+        flex-direction: column;
+    }
+    .MargeUL {
+        margin-bottom: 40px;
+    }
+    .ullien1 {
+        margin-top: -35px;
+    }
+}
+
+/* Fin du RESPONSIVE FOOTER */
